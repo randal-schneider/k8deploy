@@ -4,7 +4,7 @@ metadata:
   name: k8deploy
   namespace: default
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       bb: web
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: k8-deploy-site
-        image: ranschneider/k8deploy:latest
+        image: ranschneider/k8deploy:v1
 ---
 apiVersion: v1
 kind: Service
